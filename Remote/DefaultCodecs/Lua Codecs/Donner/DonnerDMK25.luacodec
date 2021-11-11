@@ -1,0 +1,20 @@
+version={1,1,1}
+
+
+
+function remote_supported_control_surfaces()
+
+	local surfaces =		{
+
+			{ manufacturer="Donner", model="DMK-25",
+				source="DonnerDMK25_101.lua", picture="DMK25_reason.png", 
+				in_ports={{description="In Port"}},
+				out_ports={{description="Out Port", optional=true}},
+				setup_info_text="Donner DMK-25 basic mapping by iEns Labs",
+				has_keyboard=true
+			},
+
+		}	return surfaces
+
+end
+

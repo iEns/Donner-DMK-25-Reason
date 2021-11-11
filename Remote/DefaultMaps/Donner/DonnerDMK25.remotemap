@@ -1,0 +1,38 @@
+Propellerhead Remote Mapping File					
+File Format Version	1.0.0				
+Control Surface Manufacturer	Donner				
+Control Surface Model	DMK-25				
+Map Version	1.0.1				
+
+
+// Mapping for Donner DMK-25 by iEns Labs
+
+
+Scope	Propellerheads	Reason Document			
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Stop		Stop		
+Map	Play		Play		
+Map	Record		Record		
+Map	Rewind		Rewind		
+Map	Fast Forward		Fast Forward		
+Map	Loop		Loop On/Off		
+
+Map	PadPrg 1		Target Track Mute		
+Map	PadPrg 2		Target Track Solo		
+//Map	PadPrg 3				
+Map	PadPrg 4		Target Next Track		
+Map	PadPrg 5		Undo		
+Map	PadPrg 6		Redo		
+//Map	PadPrg 7				
+Map	PadPrg 8		Target Previous Track		
+
+
+Scope	Propellerheads	Master Keyboard			
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Keyboard		Keyboard		
+Map	Pitch Bend		Pitch Bend
+Map	Mod Wheel		Mod Wheel
+Map	Channel Pressure		Channel Pressure
+Map	Expression		Expression
+Map	Damper Pedal		Damper Pedal
+		
