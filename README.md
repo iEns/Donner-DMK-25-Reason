@@ -1,46 +1,82 @@
-# Donner DMK-25 Remote Map for Reason 11 and 12
+# Donner DMK-25 Remote Map for Reason
 
-These basic configuration files will allow you to use all the features of the DMK-25 in Reason 11 and 12 (and possibly other versions?).
+Remote mapping configuration for the Donner DMK-25 MIDI controller in Propellerhead Reason 11, 12, and 13.
 
-It solves the problems that the transport buttons are weird, and some of the faders can't be assigned to remote functions.
+## Features
 
-### Installation on Windows:
-Download the files and copy them into your Reason Remote folder like this:
+- All transport buttons (Loop, Rewind, Fast Forward, Stop, Play, Record) work as expected
+- All faders and knobs are assignable to any Reason parameter
+- Bank switching for faders/knobs is fully supported
+- Pads are assignable to any function, with bank and program switching support
 
-1. Shut down Reason
+## Installation
 
-2. Copy DMK25_reason.png, DonnerDMK25.luacodec and DonnerDMK25_100.lua into
-C:\Program Files\Propellerhead\Reason 12\Remote\DefaultCodecs\Lua Codecs\Donner
+### Windows
 
-3. Copy DonnerDMK25.remotemap into
-C:\Program Files\Propellerhead\Reason 12\Remote\DefaultMaps\Donner
+1. Close Reason if it's running
 
-4. Start reason
+2. Copy `DMK25_reason.png`, `DonnerDMK25.luacodec`, and `DonnerDMK25_101.lua` to:
+   ```
+   C:\Program Files\Propellerhead\Reason XX\Remote\DefaultCodecs\Lua Codecs\Donner
+   ```
 
-5. In Reason Preferences under Control Surfaces, click "Add Manually" and select Donner DMK-25 and choose the correct In-Port.
+3. Copy `DonnerDMK25.remotemap` to:
+   ```
+   C:\Program Files\Propellerhead\Reason XX\Remote\DefaultMaps\Donner
+   ```
 
-Important: I was unable to make autodetect work, since the controller seemingly does not respond to midi-input, making automatic identification impossible.
+4. Create the `Donner` folders if they don't exist
 
+5. Replace `XX` with your Reason version (11, 12, or 13)
 
-### Installation on Mac
+### macOS
 
-No clue. I guess it's mostly the same, but the file folders are located differently.
+1. Close Reason if it's running
 
+2. In Finder, navigate to `/Applications`, right-click `Reason XX.app`, and select **Show Package Contents**
 
-### Usage:
+3. Copy `DMK25_reason.png`, `DonnerDMK25.luacodec`, and `DonnerDMK25_101.lua` to:
+   ```
+   Contents/Resources/Remote/DefaultCodecs/Lua Codecs/Donner
+   ```
 
-All the transport buttons now work as expected.
-All faders and knobs (including bank switching) can now be assigned to any function in Reason.
-Pads can be assigned to any function in Reason. Switching of pad banks and pad program are supported.
+4. Copy `DonnerDMK25.remotemap` to:
+   ```
+   Contents/Resources/Remote/DefaultMaps/Donner
+   ```
 
-If *PROGRAM* is activated on the Donner, the pads have the following functions:
+5. Create the `Donner` folders if they don't exist
 
-	Pad 1: Mute current track
-	Pad 2: Solo current track
-	Pad 4 and 8: Change targeted track
-	Pad 5: Undo
-	Pad 6: Redo
+## Setup in Reason
 
-If you want to change what the pads do while *PROGRAM* is active, edit the DonnerDMK25.remotemap file.
+1. Open **Preferences** > **Control Surfaces**
+2. Click **Add Manually**
+3. Select **Donner DMK-25** from the list
+4. Choose the correct MIDI In-Port for your controller
 
-***Provided as is, no guarantees.***
+> **Note:** Auto-detection is not supported. The DMK-25 does not respond to MIDI identity requests, so manual setup is required.
+
+## Usage
+
+### Default Pad Functions (PROGRAM Mode)
+
+When **PROGRAM** is activated on the DMK-25, the pads provide the following shortcuts:
+
+| Pad | Function |
+|-----|----------|
+| 1 | Mute current track |
+| 2 | Solo current track |
+| 4 | Previous track |
+| 5 | Undo |
+| 6 | Redo |
+| 8 | Next track |
+
+To customize pad functions in PROGRAM mode, edit the `DonnerDMK25.remotemap` file.
+
+## Compatibility
+
+Tested on Reason 11 and 12. The configuration should work on Reason 13, but this has not been verified.
+
+## Disclaimer
+
+Provided as-is, without warranty.
